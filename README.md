@@ -1,6 +1,6 @@
 # Bootstrap Italia Nunjucks
 
-Bootstrap Italia Nunjucks è un generatore di temi statici basato su [Bootstrap Italia](https://getbootstrap.com/docs/4.2/getting-started/introduction/) per la creazione di siti responsive, mobile-first con il CMS Plone.
+Bootstrap Italia Nunjucks è un generatore di temi statici basato su [Bootstrap Italia](https://getbootstrap.com/docs/4.2/getting-started/introduction/) per la creazione di siti responsive e mobile-first.
 
 Bootstrap Italia Nunjucks osserva le [linee guida di design per i servizi web delle Pubbliche Amministrazioni](https://docs.italia.it/italia/designers-italia/design-linee-guida-docs/).
 
@@ -12,20 +12,20 @@ Per utilizzare Bootstrap Italia Nunjucks e iniziare a creare una nuova pagina de
 
 ## Installazione dipendenze
 ```javascript
-  npm install;
+  npm install
 ```
 
 ## Ambiente di sviluppo
 Per avviare l'ambiente di sviluppo:
 ```javascript
-  npm run start;
+  npm run start
 ```
 Il server locale di sviluppo supporta il reload automatico attraverso [Browser Sync]
 
-## Produzione commpilati
+## Produzione compilati
 Per la compilazione dei file sorgenti:
 ```javascript
-  npm run build;
+  npm run build
 ```
 Di default i file compilati sono generati nella cartella dist
 
