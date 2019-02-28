@@ -238,6 +238,16 @@ gulp.task(
   )
 )
 
+// HTML
+
+gulp.task('html', () =>
+  gulp
+    .src(['src/pages/*', '!src/pages/partials'])
+    .pipe(nunjucks.compile())
+    .pipe(gulp.dest('dist'))
+)
+
+
 // Sync
 
 gulp.task('sync', () => {
@@ -258,14 +268,6 @@ gulp.task('sync', () => {
   gulp.watch(Paths.JS_WATCH, gulp.series('js-min', 'js-bundle-min'))
 })
 
-// HTML
-
-gulp.task('html', () =>
-  gulp
-    .src(['src/pages/*', '!src/pages/partials'])
-    .pipe(nunjucks.compile())
-    .pipe(gulp.dest('dist'))
-)
 
 // Main build task
 
