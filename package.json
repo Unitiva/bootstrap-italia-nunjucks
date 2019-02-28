@@ -17,7 +17,7 @@
   "scripts": {
     "start": "gulp serve",
     "build": "gulp build",
-    "start-storybook": "start-storybook  -s ./dist -p 9001 -c .storybook",
+    "start-storybook": "start-storybook  -s ./dist,/assets/img -p 9001 -c .storybook",
     "storybook": "npm-run-all build start-storybook",
     "release": "node scripts/release",
     "bump-major": "npm version major -m \"Release %s\"",

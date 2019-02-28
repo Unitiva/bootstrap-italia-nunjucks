@@ -1,17 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-  {% include "partials/head.html" %}
+  {% include "partials/head/head.html" %}
   <body>
-    {%include "partials/header.html" %}
-
-    <div class="container">
-      {%include "partials/breadcrumbs.html" %}
-    </div>
-    <div class="container">
-      {%include "partials/calendar.html" %}
-      {%include "partials/carousel.html" %} 
-    </div>
-
+    {% include "partials/header/header.html" %}
+    {% include "partials/carousel/carousel.html" %}
     <div class="container my-4">
       <h1>Ciao</h1>
       <h2>Descrizione della pagina</h2>
@@ -24,7 +16,7 @@
       <p>Pellentesque habitant morbi tristique senectus et netus.</p>
     </div>
 
-    {% include "partials/footer.html" %}
+    {% include "partials/footer/footer.html" %}
 
     <!-- Notification per tornare alla pagina principale -->
     <div
