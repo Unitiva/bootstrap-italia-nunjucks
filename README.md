@@ -1,64 +1,39 @@
-[![GitHub issues](https://img.shields.io/github/issues/italia/bootstrap-italia.svg)](https://github.com/italia/bootstrap-italia/issues)
-[![Join the #design channel](https://img.shields.io/badge/Slack%20channel-%23design-blue.svg)](https://developersitalia.slack.com/messages/C7VPAUVB3/)
-[![Get invited](https://slack.developers.italia.it/badge.svg)](https://slack.developers.italia.it/)
-[![Chat on Gitter](https://img.shields.io/gitter/room/italia/bootstrap-italia.svg)](https://gitter.im/bootstrap-Italia)
+# Bootstrap Italia Nunjucks
 
-[![](https://data.jsdelivr.com/v1/package/npm/bootstrap-italia/badge?style=rounded)](https://www.jsdelivr.com/package/npm/bootstrap-italia)
+Bootstrap Italia Nunjucks è un generatore di temi statici basato su [Bootstrap Italia](https://getbootstrap.com/docs/4.2/getting-started/introduction/) per la creazione di siti responsive, mobile-first con il CMS Plone.
 
-<a href="https://www.browserstack.com/
-" target="_blank"><img src="https://p14.zdusercontent.com/attachment/1015988/Acl6uTyvwHnAmpEiRm9p8eh1R?token=eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2In0..ewB9aVdbiHzfkiZdbgrc2Q.s1B7FuA_Wdegrj1PBZ0pVGgjWhzuJD8yTKRptv2BxFNe-KQSsaVtbkBer5X2rNq81mHZ_kEuAOigMPjgorAAzTUA5AmP_OX4JQJdQk96Vg3UggORRd4UDSdS-tF4o4evvo_8f3cciZcBBiFuqm-GXAclqWRusZxHITpEM7OHNvvMSDV35zbOO0zLwTnHKNQL715Ozitqrx_Q94yYO9NUM-h6jrN76MM5hLdM2umQXsrd0JH5EMp7tp8yDAAyNtoqZUiNFxCh0o1dUAFgZodntaLkGOv4Gzzj5kb7iBWS6JY.Ev5PtLdgCYcC4799H6-GEg" 
-alt="BrowserStack logo" width="200" height="105" /></a>
-
-We are using BrowserStack for interactive cross browser testing. They are sponsoring our open source project!
-
-# Bootstrap Italia
-
-Bootstrap Italia è un tema basato su [Bootstrap 4.2](https://getbootstrap.com/docs/4.2/getting-started/introduction/) per la creazione di applicazioni responsive, mobile-first per il web.
-
-Bootstrap Italia eredita tutte le funzionalità, componenti, mixins, grid system, ed altro già presenti in Bootstrap 4, e le personalizza secondo le [linee guida di design per i servizi web delle Pubbliche Amministrazioni](https://docs.italia.it/italia/designers-italia/design-linee-guida-docs/).
+Bootstrap Italia Nunjucks osserva le [linee guida di design per i servizi web delle Pubbliche Amministrazioni](https://docs.italia.it/italia/designers-italia/design-linee-guida-docs/).
 
 **[Vedi la documentazione completa »](https://italia.github.io/bootstrap-italia/)**
 
-oppure
-
-**[Scarica l'ultima versione della libreria »](https://github.com/italia/bootstrap-italia/releases)**
-
-## Indice
-
-- [Come iniziare](#come-iniziare)
-- [Segnalazione bug e richieste](#segnalazione-bug-e-richieste-di-aiuto)
-- [Come contribuire](#come-contribuire)
-
 ## Come iniziare
 
-Per utilizzare Bootstrap Italia all'interno del tuo progetto, è sufficiente includere i file compilati come descritto
-in dettaglio alla [pagina introduttiva della documentazione](https://italia.github.io/bootstrap-italia/docs/come-iniziare/introduzione/).
+Per utilizzare Bootstrap Italia Nunjucks e iniziare a creare una nuova pagina del tema è sufficiente aggiungere un nuovo file html nella cartella src/pages. Bootstrap Italia Nunjucks utilizza Nunjucks per modulare porzioni di markup html e l'inclusione di tali moduli.
 
-## Segnalazione bug e richieste di aiuto
+## Installazione dipendenze
+```javascript
+  npm install;
+```
 
-Vuoi segnalare un bug o fare una richiesta?
+## Ambiente di sviluppo
+Per avviare l'ambiente di sviluppo:
+```javascript
+  npm run start;
+```
+Il server locale di sviluppo supporta il reload automatico attraverso [Browser Sync]
 
-Prima di tutto assicurati che sia un problema relativo al tema Bootstrap Italia e non alla libreria Bootstrap da cui deriva 
-(in tal caso puoi fare riferimento al [repository di Bootstrap](https://github.com/twbs/bootstrap)), poi
-dai un'occhiata a come [creare una issue](https://github.com/italia/bootstrap-italia/blob/master/CONTRIBUTING.md#creare-una-issue).
-
-## Come contribuire
-
-Vorresti dare una mano su Bootstrap Italia? **Sei nel posto giusto!**
- 
-Se non l'hai già fatto, inizia spendendo qualche minuto per approfondire la tua conoscenza sulle
-[linee guida di design per i servizi web della PA](https://docs.italia.it/italia/designers-italia/design-linee-guida-docs/),
-e fai riferimento alle [indicazioni su come contribuire a Bootstrap Italia](https://github.com/italia/bootstrap-italia/blob/master/CONTRIBUTING.md).
-
-A questo punto, è necessario impostare il tuo ambiente locale per la compilazione dei file sorgente e la generazione
-della documentazione. Alla [pagina relativa agli strumenti di compilazione](https://italia.github.io/bootstrap-italia/docs/come-iniziare/strumenti-di-compilazione/)
-è possibile avere tutte le informazioni necessarie a questo scopo.
+## Produzione commpilati
+Per la compilazione dei file sorgenti:
+```javascript
+  npm run build;
+```
+Di default i file compilati sono generati nella cartella dist
 
 ## Licenze software dei componenti di terze parti
 
-### Componenti distribuiti con Bootstrap Italia
+### Componenti distribuiti con Bootstrap Italia NunJucks
 
-Vengono di seguito elencati i componenti distribuiti con Bootstrap Italia che hanno una propria licenza diversa da CC0.
+Vengono di seguito elencati i componenti distribuiti con Bootstrap Italia Nunjucks che hanno una propria licenza diversa da CC0.
 
 - [jQuery](https://jquery.com/) © jQuery Foundation, licenza MIT
 - [Popper.js](https://popper.js.org/) © Federico Zivolo and contributors, licenza MIT
@@ -69,7 +44,7 @@ Vengono di seguito elencati i componenti distribuiti con Bootstrap Italia che ha
 
 ### Principali dipendenze per la fase di compilazione e sviluppo
 
-- Generatore di siti statici per ruby [Jekyll](https://jekyllrb.com), © Tom Preston-Werner and Jekyll contributors, licenza MIT
+- Motore di templating completo per javascript [Nunjucks](https://www.npmjs.com/package/nunjucks)
 - Tool per il testing della correttezza formale dell'HTML[html-proofer](https://github.com/gjtorikian/html-proofer), © Garen Torikian, licenza MIT
 - Tool per il reload automatico del browser [Browser Sync](https://www.browsersync.io/) Apache License Version 2.0
 - Gestione del versionamento [conventional-changelog](https://github.com/conventional-changelog/conventional-changelog/) © conventional-changelog team, ISC License
@@ -78,7 +53,3 @@ Vengono di seguito elencati i componenti distribuiti con Bootstrap Italia che ha
 - Code formatter per Javascript [Prettier](https://prettier.io/), © James Long and contributors, licenza MIT
 - Compilazione SASS [node-sass](https://github.com/sass/node-sass/), © Andrew Nesbitt, licenza MIT
 - GitHub REST API client per JavaScript [Octokit rest.js](https://octokit.github.io/rest.js/) © 2012 Cloud9 IDE, Inc. (Mike de Boer), 2017-2018 Octokit contributors, licenza MIT
-
-La licenza di Bootstrap Italia è **BSD 3-Clause** ed è visibile nel file LICENSE:
-
-[![License](https://img.shields.io/github/license/italia/bootstrap-italia.svg)](https://github.com/italia/bootstrap-italia/blob/master/LICENSE)
