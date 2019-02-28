@@ -7,6 +7,7 @@ const gulp = require('gulp'),
   concat = require('gulp-concat'),
   uglify = require('gulp-uglify'),
   babel = require('gulp-babel'),
+  htmlmin = require('gulp-htmlmin'),
   replace = require('gulp-replace'),
   header = require('gulp-header'),
   footer = require('gulp-footer'),
@@ -263,6 +264,17 @@ gulp.task('html', () =>
   gulp
     .src(['src/pages/*', '!src/pages/partials'])
     .pipe(nunjucks.compile())
+    .pipe(
+      htmlmin({
+        collapseWhitespace: true,
+        minifyJS: true,
+        minifyCSS: true,
+        minifyURLs: true,
+        removeComments: true,
+        sortAttributes: true,
+        sortClassName: true,
+      })
+    )
     .pipe(gulp.dest('dist'))
 )
 
