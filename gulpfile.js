@@ -18,8 +18,6 @@ const gulp = require('gulp'),
   pkg = require('./package.json'),
   nunjucks = require('gulp-nunjucks');
 
-const DOCUMENTATION_DESTINATION = '_site';
-
 const Paths = {
   VENDOR_JS: [
     'node_modules/jquery/dist/jquery.js',
@@ -63,17 +61,9 @@ const Paths = {
   ],
 
   SOURCE_SCSS: 'src/scss/' + pkg.name + '.scss',
-  SOURCE_DOCUMENTATION_SCSS: 'docs/assets/src/scss/docs.scss',
-  SOURCE_DOCUMENTATION_JS: [
-    'docs/assets/src/js/cover-animation.js',
-    'docs/assets/src/js/docs.js'
-  ],
   DIST: 'dist',
-  DIST_DOCUMENTATION: 'docs/assets/dist',
   SCSS_WATCH: 'src/scss/**/**',
   JS_WATCH: 'src/js/**/**',
-  SCSS_DOCUMENTATION_WATCH: 'docs/assets/src/scss/**/**',
-  JS_DOCUMENTATION_WATCH: 'docs/assets/src/js/**/**'
 };
 
 const bootstrapItaliaBanner = ['/**',
@@ -171,34 +161,6 @@ gulp.task('js-bundle-min', () => {
     .pipe(touch());
 });
 
-// Documentation related tasks
-
-gulp.task('documentation-scss-min', () => {
-  return gulp.src(Paths.SOURCE_DOCUMENTATION_SCSS)
-    .pipe(sourcemaps.init())
-    .pipe(sass().on('error', sass.logError))
-    .pipe(cleanCSS({
-      compatibility: 'ie10'
-    }))
-    .pipe(autoprefixer())
-    .pipe(sourcemaps.write())
-    .pipe(rename({
-      suffix: '.min'
-    }))
-    .pipe(gulp.dest(Paths.DIST_DOCUMENTATION + '/css'))
-    .pipe(touch());
-});
-
-gulp.task('documentation-js-min', () => {
-  return gulp.src(Paths.SOURCE_DOCUMENTATION_JS)
-    .pipe(uglify())
-    .pipe(rename({
-      suffix: '.min'
-    }))
-    .pipe(gulp.dest(Paths.DIST_DOCUMENTATION + '/js'))
-    .pipe(touch());
-});
-
 gulp.task('svg-sprite', function () {
   return gulp.src('src/svg/it-*.svg')
     .pipe(svgSprite({
@@ -232,33 +194,6 @@ gulp.task('fonts', () => {
     .pipe(touch());
 });
 
-// Main Jekyll task
-
-gulp.task('jekyll', done => {
-
-  const jekyll = process.platform === 'win32' ?
-    spawn('jekyll.bat', ['build',
-      '--watch',
-      '--incremental',
-      '--drafts',
-      '--config', '_config.yml'
-    ]) :
-    spawn('bundle', ['exec', 'jekyll', 'build',
-      '--watch',
-      '--incremental',
-      '--drafts',
-      '--config', '_config.yml'
-    ]);
-
-  const jekyllOutput = (buffer) => {
-    log('Jekyll: ' + buffer.toString());
-    if (buffer.toString().indexOf('done') > -1) done() // TODO trovare un modo migliore per verificare quando Jekyll ha completato
-  };
-
-  jekyll.stdout.on('data', jekyllOutput);
-  jekyll.stderr.on('data', jekyllOutput)
-});
-
 // Library
 
 gulp.task('build-library', gulp.series(
@@ -270,36 +205,6 @@ gulp.task('build-library', gulp.series(
   'assets'
 ));
 
-// Documentation
-
-gulp.task('build-documentation', gulp.series(
-  'documentation-scss-min',
-  'documentation-js-min'
-));
-
-// Sync
-
-gulp.task('sync', () => {
-  browserSync.init({
-    files: [DOCUMENTATION_DESTINATION + '/**'],
-    port: 4000,
-    server: {
-      baseDir: DOCUMENTATION_DESTINATION,
-    }
-  });
-
-  gulp.watch([
-    Paths.SCSS_WATCH,
-    Paths.JS_WATCH
-  ], gulp.series('build-library'));
-
-  gulp.watch([
-    Paths.SCSS_DOCUMENTATION_WATCH,
-    Paths.JS_DOCUMENTATION_WATCH
-  ], gulp.series('build-documentation'))
-
-});
-
 // HTML
 
 gulp.task('html', () =>
@@ -310,8 +215,8 @@ gulp.task('html', () =>
 
 // Main build task
 
-gulp.task('build', gulp.series('build-library', 'build-documentation', 'html'));
+gulp.task('build', gulp.series('build-library', 'html'));
 
 // Main serve task
 
-gulp.task('serve', gulp.series('build', 'jekyll', 'sync'));
+gulp.task('serve', gulp.series('build'));
