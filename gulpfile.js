@@ -262,7 +262,7 @@ gulp.task('sync', () => {
 
 gulp.task('html', () =>
   gulp
-    .src(['src/pages/*', '!src/pages/partials'])
+    .src(['src/pages/*.html', '!src/pages/partials'])
     .pipe(nunjucks.compile())
     .pipe(
       htmlmin({
