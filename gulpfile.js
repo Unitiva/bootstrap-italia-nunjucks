@@ -252,6 +252,7 @@ gulp.task('html', () =>
 
 gulp.task('sync', () => {
   browserSync.init({
+    files: 'dist/**/*',
     port: 4000,
     server: {
       baseDir: 'dist',
@@ -259,7 +260,7 @@ gulp.task('sync', () => {
     injectChanges: true,
   })
 
-  gulp.watch('dist/css/**/*.css').on('change', browserSync.reload)
+  // gulp.watch('dist/css/**/*.css').on('change', browserSync.reload)
 
   gulp.watch(Paths.HTML_WATCH, gulp.series('html'))
 
