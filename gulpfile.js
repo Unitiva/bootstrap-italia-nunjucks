@@ -185,22 +185,26 @@ gulp.task('js-bundle-min', () => {
     .pipe(touch())
 })
 
-gulp.task('svg-sprite', function () {
-  return gulp.src('src/svg/it-*.svg')
-    .pipe(svgSprite({
-      shape: {
-        dimension: { // Set maximum dimensions
-          maxWidth: 32,
-          maxHeight: 32
-        }
-      },
-      mode: {
-        defs: {
-          dest: '.',
-          sprite: 'sprite.svg'
-        }
-      }
-    }))
+gulp.task('svg-sprite', function() {
+  return gulp
+    .src('src/svg/it-*.svg')
+    .pipe(
+      svgSprite({
+        shape: {
+          dimension: {
+            // Set maximum dimensions
+            maxWidth: 32,
+            maxHeight: 32,
+          },
+        },
+        mode: {
+          defs: {
+            dest: '.',
+            sprite: 'sprite.svg',
+          },
+        },
+      })
+    )
     .pipe(gulp.dest(Paths.DIST + '/svg'))
 })
 
@@ -238,7 +242,6 @@ gulp.task(
 
 gulp.task('sync', () => {
   browserSync.init({
-    files: 'dist/*.html',
     port: 4000,
     server: {
       baseDir: 'dist',
