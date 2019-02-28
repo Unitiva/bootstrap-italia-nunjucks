@@ -8,6 +8,7 @@ const gulp = require('gulp'),
   uglify = require('gulp-uglify'),
   babel = require('gulp-babel'),
   htmlmin = require('gulp-htmlmin'),
+  imagemin = require('gulp-imagemin'),
   replace = require('gulp-replace'),
   header = require('gulp-header'),
   footer = require('gulp-footer'),
@@ -211,6 +212,7 @@ gulp.task('svg-sprite', function() {
 gulp.task('assets', () => {
   return gulp
     .src(['src/assets/**'])
+    .pipe(imagemin())
     .pipe(gulp.dest(Paths.DIST + '/assets'))
     .pipe(touch())
 })
