@@ -1,0 +1,73 @@
+/* global document */
+import { storiesOf } from '@storybook/html'
+import SimpleCallout from './simple-callout.html'
+
+const text = `Maecenas vulputate ante dictum vestibulum volutpat.
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  Aenean non augue non purus vestibulum varius.`
+
+
+storiesOf('Callout', module)
+  .add('Simple callout', () => SimpleCallout,
+    {
+      notes: 'A very simple component',
+      icon: 'it-info-circle',
+      text,
+      title: 'titolo callout'
+    }
+  )
+  .add('Simple success callout', () => SimpleCallout,
+    {
+      type: 'success',
+      icon: 'it-check-circle',
+      text,
+      title: 'usa'
+    },
+    {
+      notes: 'A very simple component',
+    }
+  )
+  .add('Simple warning callout', () => SimpleCallout,
+    {
+      type: 'warning',
+      icon: 'it-help-circle',
+      text,
+      title: 'attenzione'
+    },
+    {
+      notes: 'A very simple component',
+    }
+  )
+  .add('Simple danger callout', () => SimpleCallout,
+    {
+      type: 'danger',
+      icon: 'it-close-circle',
+      text,
+      title: 'non usare'
+    },
+    {
+      notes: 'A very simple component',
+    }
+  )
+  .add('Simple important callout', () => SimpleCallout,
+    {
+      type: 'important',
+      icon: 'it-info-circle',
+      text,
+      title: 'importante'
+    },
+    {
+      notes: 'A very simple component',
+    }
+  )
+  .add('Simple note callout', () => SimpleCallout,
+    {
+      type: 'note',
+      icon: 'it-info-circle',
+      text,
+      title: 'note al riguardo'
+    },
+    {
+      notes: 'A very simple component',
+    }
+  )
