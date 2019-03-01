@@ -5,5 +5,7 @@
     </svg>
     <span class="sr-only">Confermato</span> {{ title }}
   </div>
-	<p>{{ text }}</p>
+  {% block content %}
+	  <p>{{ text }}</p>
+  {% endblock %}
 </div>

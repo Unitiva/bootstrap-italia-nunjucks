@@ -1,13 +1,14 @@
 /* global document */
 import { storiesOf } from '@storybook/html'
 import SimpleCallout from './simple-callout.html'
+import HighlightCallout from './highlight-callout.html'
 
 const text = `Maecenas vulputate ante dictum vestibulum volutpat.
   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
   Aenean non augue non purus vestibulum varius.`
 
 
-storiesOf('Callout', module)
+storiesOf('Callout | Simple callout', module)
   .add('Simple callout', () => SimpleCallout,
     {
       notes: 'A very simple component',
@@ -71,3 +72,28 @@ storiesOf('Callout', module)
       notes: 'A very simple component',
     }
   )
+
+storiesOf('Callout | Highlight callout', module)
+  .add('Highlight callout', () => HighlightCallout,
+  {
+    icon: 'it-info-circle',
+    text,
+    title: 'note al riguardo',
+    highlight: 'Lorem Ipsum'
+  },
+  {
+    notes: 'A very simple component',
+  }
+)
+.add('Highlight danger callout', () => HighlightCallout,
+  {
+    type: 'danger',
+    icon: 'it-close-circle',
+    text,
+    title: 'note al riguardo',
+    highlight: 'Lorem Ipsum!!'
+  },
+  {
+    notes: 'A very simple component',
+  }
+)
