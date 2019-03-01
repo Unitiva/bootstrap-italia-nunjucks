@@ -2,7 +2,7 @@
 import { storiesOf } from '@storybook/html'
 import * as Avatar from './avatar.html'
 
-storiesOf('Partials', module)
+storiesOf('Avatar', module)
   .add('Avatar xs', () => Avatar, {size: 'xs'} , {
     notes: 'A very simple component',
   })

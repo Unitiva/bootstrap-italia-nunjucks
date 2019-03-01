@@ -2,7 +2,7 @@
 import { storiesOf } from '@storybook/html'
 import * as Alert from './alert.html'
 
-storiesOf('Partials', module)
+storiesOf('Alerts', module)
   .add('Alert success', () => Alert, { type: 'success' }, {
     notes: 'A very simple component',
   })
