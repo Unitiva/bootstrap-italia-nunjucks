@@ -92,4 +92,11 @@ addDecorator(
 
 addDecorator(withViewport)
 
+// Custom Nunjucks decorator
+const withNunjsckus = (storyFn, optionsObj) =>
+{
+  return nunjucks.renderString(storyFn(), {...optionsObj.parameters})
+}
+addDecorator(withNunjsckus)
+
 configure(loadStories, module)
