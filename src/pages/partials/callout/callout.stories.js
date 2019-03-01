@@ -1,4 +1,3 @@
-/* global document */
 import { storiesOf } from '@storybook/html'
 import SimpleCallout from './simple-callout.html'
 import HighlightCallout from './highlight-callout.html'
