@@ -1,8 +1,31 @@
+<script>
+  var __PUBLIC_PATH__ = '/fonts'
+  function onBodyLoaded(body) {
+    body.appendChild(document.createElement('script')).src = './js/bootstrap-italia.bundle.min.js';
+  }
+  if (document.body) {
+    onBodyLoaded(document.body)
+  }
+  else {
+    new MutationObserver(function (records, self) {
+      for (var i = 0; i < records.length; ++i) {
+        for (var j = 0; j < records[i].addedNodes.length; ++j) {
+          if (records[i].addedNodes[j].nodeName == 'BODY') {
+            self.disconnect();
+            onBodyLoaded(records[i].addedNodes[j]);
+          }
+        }
+      }
+    }).observe(document.documentElement,
+      {
+        childList: true,
+      });
+  }
+</script>
 <link rel="stylesheet" href="./css/bootstrap-italia.min.css" />
-<script src="./js/bootstrap-italia.bundle.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/nunjucks/3.0.1/nunjucks.min.js"></script>
 <style>
   .storybook-story-padding {
     padding: 20px
   }
 </style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/nunjucks/3.0.1/nunjucks.min.js"></script>
