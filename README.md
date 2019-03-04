@@ -22,6 +22,12 @@ Per avviare l'ambiente di sviluppo:
 ```
 Il server locale di sviluppo supporta il reload automatico attraverso [Browser Sync]
 
+## Avvio Storybook
+```javascript
+  npm run storybook
+```
+Il server locale di sviluppo supporta il reload automatico attraverso [Browser Sync]
+
 ## Produzione compilati
 Per la compilazione dei file sorgenti:
 ```javascript
@@ -47,6 +53,7 @@ Vengono di seguito elencati i componenti distribuiti con Bootstrap Italia Nunjuc
 - Motore di templating completo per javascript [Nunjucks](https://www.npmjs.com/package/nunjucks)
 - Tool per il testing della correttezza formale dell'HTML[html-proofer](https://github.com/gjtorikian/html-proofer), © Garen Torikian, licenza MIT
 - Tool per il reload automatico del browser [Browser Sync](https://www.browsersync.io/) Apache License Version 2.0
+- Strumento di sviluppo per la creazione della UI style guide. [Storybook](https://storybook.js.org/)
 - Gestione del versionamento [conventional-changelog](https://github.com/conventional-changelog/conventional-changelog/) © conventional-changelog team, ISC License
 - Build system per le librerie Javascript e CSS [GulpJS](https://gulpjs.com/), © Blaine Bublitz, Eric Schoffstall and other contributors, licenza MIT
 - Transpiler per moduli Javascript [Babel](https://babeljs.io/), © Sebastian McKenzie, licenza MIT

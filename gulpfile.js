@@ -7,12 +7,12 @@ const gulp = require('gulp'),
   concat = require('gulp-concat'),
   uglify = require('gulp-uglify'),
   babel = require('gulp-babel'),
+  htmlmin = require('gulp-htmlmin'),
+  imagemin = require('gulp-imagemin'),
   replace = require('gulp-replace'),
   header = require('gulp-header'),
   footer = require('gulp-footer'),
-  log = require('fancy-log'),
   touch = require('gulp-touch-cmd'),
-  spawn = require('cross-spawn'),
   svgSprite = require('gulp-svg-sprite'),
   browserSync = require('browser-sync').create(),
   pkg = require('./package.json'),
@@ -212,6 +212,7 @@ gulp.task('svg-sprite', function() {
 gulp.task('assets', () => {
   return gulp
     .src(['src/assets/**'])
+    .pipe(imagemin())
     .pipe(gulp.dest(Paths.DIST + '/assets'))
     .pipe(touch())
 })
