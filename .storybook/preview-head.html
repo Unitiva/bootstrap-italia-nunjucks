@@ -2,7 +2,12 @@
   var __PUBLIC_PATH__ = '/fonts'
   function onBodyLoaded(body) {
     body.appendChild(document.createElement('script')).src = './js/bootstrap-italia.bundle.min.js';
-    setTimeout( () => { $('[data-toggle="tooltip"]').tooltip() }, 1000) // not the best solution here
+    setTimeout( () => {
+        $('[data-toggle="tooltip"]').tooltip()
+        progressDonut.update("#donut-one", 0);
+        progressDonut.update("#donut-two", 75);
+      }
+    , 1000) // not the best solution here
   }
   if (document.body) {
     onBodyLoaded(document.body)
