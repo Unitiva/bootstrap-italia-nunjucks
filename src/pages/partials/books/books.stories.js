@@ -1,7 +1,7 @@
 /* global document */
 import { storiesOf } from '@storybook/html'
-import * as Home from './index.html'
+import * as Books from './books.html'
 
-storiesOf('Pages', module).add('Home', () => Home, {
+storiesOf('Partials', module).add('Books', () => Books, {
   notes: 'A very simple component',
 })

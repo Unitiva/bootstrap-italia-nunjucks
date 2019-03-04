@@ -1,0 +1,11 @@
+<div class="callout {% if type%}{{ type }}{% endif %}">
+	<div class="callout-title">
+    <svg class="icon">
+      <use xlink:href="/svg/sprite.svg#{{ icon }}"></use>
+    </svg>
+    <span class="sr-only">Confermato</span> {{ title }}
+  </div>
+  {% block content %}
+	  <p>{{ text }}</p>
+  {% endblock %}
+</div>

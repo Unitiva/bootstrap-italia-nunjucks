@@ -53,7 +53,7 @@ addDecorator(
      * sorts stories
      * @type {Boolean}
      */
-    sortStoriesByKind: false,
+    sortStoriesByKind: true,
     /**
      * regex for finding the hierarchy separator
      * @example:
@@ -63,7 +63,7 @@ addDecorator(
      *   /\/|\./ - split by `/` or `.`
      * @type {Regex}
      */
-    hierarchySeparator: null,
+    hierarchySeparator: /\|/,
     /**
      * regex for finding the hierarchy root separator
      * @example:
@@ -91,5 +91,21 @@ addDecorator(
 )
 
 addDecorator(withViewport)
+
+// Custom Nunjucks decorator
+const withNunjsckus = (storyFn, optionsObj) =>
+{
+  return nunjucks.renderString(storyFn(), {...optionsObj.parameters})
+}
+addDecorator(withNunjsckus)
+
+// Custom padding decorator
+const withPadding = storyFn =>
+  `<div class="storybook-story-padding">
+    ${storyFn()}
+  </div>`
+
+addDecorator(withNunjsckus)
+addDecorator(withPadding)
 
 configure(loadStories, module)
