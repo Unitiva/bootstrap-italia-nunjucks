@@ -7,3 +7,4 @@ storiesOf('Chips', module)
   .add('chips', () => Chips )
   .add('disabled', () => ChipsDisabled )
   .add('groups', () => ChipsGroups )
+

@@ -2,6 +2,6 @@
 import { storiesOf } from '@storybook/html'
 import * as Footer from './footer.html'
 
-storiesOf('Partials', module).add('Footer', () => Footer, {
+storiesOf('Footer', module).add('Footer', () => Footer, {
   notes: 'A very simple component',
 })
