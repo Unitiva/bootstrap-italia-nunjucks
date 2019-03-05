@@ -3,8 +3,11 @@
   function onBodyLoaded(body) {
     body.appendChild(document.createElement('script')).src = './js/bootstrap-italia.bundle.min.js';
     setTimeout( () => {
-        $('[data-toggle="tooltip"]').tooltip()
+        $('[data-toggle="tooltip"]').tooltip();
         $('.dimmers').dimmerShow();
+        $('.modals').show();
+        $('[data-toggle="popover"]').popover();
+        notificationShow('notifications', 60000)
       }
     , 1000) // not the best solution here
 
