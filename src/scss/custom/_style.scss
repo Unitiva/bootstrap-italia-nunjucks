@@ -23,7 +23,9 @@ footer section {
 
   .card-body {
     padding: 0;
-    .card-title,
+    .card-title {
+      padding: 12px 24px 0;
+    }
     .card-text,
     .read-more {
       padding-left: 24px;
