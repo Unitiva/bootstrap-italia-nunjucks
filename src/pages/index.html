@@ -88,7 +88,16 @@
 
     <script>
       $(document).ready(function() {
-        notificationShow('notification-esempi')
+        notificationShow('notification-esempi');
+        var header = $(".it-nav-wrapper");
+        $(window).scroll(function() {
+            var scroll = $(window).scrollTop();
+            if (scroll >= 100) {
+              header.removeClass('full').addClass('small');
+            } else {
+              header.removeClass('small').addClass('clearHeader');
+            }
+        });
       })
     </script>
   </body>

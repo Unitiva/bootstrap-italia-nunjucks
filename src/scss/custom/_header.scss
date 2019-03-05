@@ -36,6 +36,10 @@
 @media (min-width: #{map-get($grid-breakpoints, lg)}) {
   .it-header-wrapper {
     .it-nav-wrapper {
+      &.small {
+        height: $header-center-small-height;
+        overflow: hidden;
+      }
       .it-brand-wrapper {
         padding-left: 0;
       }
