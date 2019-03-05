@@ -2,7 +2,32 @@ section {
   margin: 3em 0;
 }
 
-
 footer section {
   margin: 0;
+}
+
+
+.card-img {
+  background: $white;
+  box-shadow: 4px 4px 8px 0 rgba(0,0,0,0.1);
+  border: 1px solid #eceff1;
+  position: relative;
+  border-radius: 8px;
+  .card-body {
+    padding: 0;
+    .card-title,
+    .card-text,
+    .read-more {
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+    .read-more {
+      position: relative;
+      bottom: auto;
+      margin: 1em 0;
+    }
+  }
+  &::after {
+    display: none;
+  }
 }
