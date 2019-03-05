@@ -1,3 +1,8 @@
+#events {
+  background-color: #f3f3f3;
+  padding: 24px 0;
+}
+
 .calendar {
   padding: 0 0 56px 0;
   h4 {
@@ -16,6 +21,7 @@
     box-shadow: 8px 0 32px -8px rgba(0, 0, 0, 0.2);
     min-height: 380px;
     padding: 0;
+    background-color: $white;
     .progress-spinner {
       margin: 0 auto;
       &.progress-spinner-active:not(.progress-spinner-double) {
@@ -60,7 +66,7 @@
         .hour {
           font-size: 12px;
           font-weight: 600;
-          color: #222;
+          color: #777;
           display: block;
           font-family: $font-family-sans-serif;
         }
@@ -69,7 +75,7 @@
           font-weight: 600;
           padding: 0;
           line-height: 1.5;
-          color: #222;
+          color: #777;
           display: block;
           font-family: $font-family-sans-serif;
         }
