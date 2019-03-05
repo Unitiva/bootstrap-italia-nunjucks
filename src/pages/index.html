@@ -4,20 +4,62 @@
   <body>
     {% set active = 'home' %}
     {% include "partials/header/header.html" %}
-
-    <div class="container my-4">
-      <h1>Home</h1>
-      <p>
-        Ab illo tempore, ab est sed immemorabili.<br />
-        Ullamco laboris nisi ut aliquid ex ea commodi consequat.<br />
-        Quis aute iure reprehenderit in voluptate velit esse.<br />
-        Petierunt uti sibi concilium totius Galliae in diem certam indicere.
-      </p>
-      <p>Pellentesque habitant morbi tristique senectus et netus.</p>
+    <div id="main_container">
+      {% include "partials/hero/hero.html" %}
+      <section class="container">
+        {% include "partials/card/simple-card.html" %}
+      </section>
+      <section class="container">
+        <div class="">
+          <h3>Ultime Notizie</h3>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            {% include "partials/card/article-card.html" %}
+          </div>
+          <div class="col-md-4">
+            {% include "partials/card/article-card.html" %}
+          </div>
+          <div class="col-md-4">
+            {% include "partials/card/article-card.html" %}
+          </div>
+        </div>
+      </section>
+      <section id="siti_tematici">
+      <div class="container">
+        <div class="widget">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="titolosezione">
+                <h3>Siti tematici</h3>
+              </div>
+            </div>
+          </div>
+          <div class="row row-eq-height">
+            <div class="col-lg-4 col-md-6 mb16">
+              {% include "partials/card/colored-card.html" %}
+            </div>
+            <div class="col-lg-4 col-md-6 mb16">
+              {% include "partials/card/colored-card.html" %}
+            </div>
+            <div class="col-lg-4 col-md-6 mb16">
+              {% include "partials/card/colored-card.html" %}
+            </div>
+            <div class="col-lg-4 col-md-6 mb16">
+              {% include "partials/card/colored-card.html" %}
+            </div>
+            <div class="col-lg-4 col-md-6 mb16">
+              {% include "partials/card/colored-card.html" %}
+            </div>
+            <div class="col-lg-4 col-md-6 mb16">
+              {% include "partials/card/colored-card.html" %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     </div>
-
     {% include "partials/footer/footer.html" %}
-
     <!-- Notification per tornare alla pagina principale -->
     <div
       class="notification dismissable with-icon"
@@ -28,7 +70,7 @@
       <h5 id="notification-esempi-title">
         <svg class="icon">
           <use xlink:href="./svg/sprite.svg#it-info-circle"></use></svg
-        >Esempio di template vuoto
+        >Esempio di Home con Carousel
       </h5>
       <p>
         <a href="#">Torna alla pagina principale degli esempi</a>
