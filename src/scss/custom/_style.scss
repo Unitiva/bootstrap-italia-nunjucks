@@ -6,6 +6,9 @@ footer section {
   margin: 0;
 }
 
+.margin-bottom {
+  margin-bottom: 1.5em;
+}
 
 .card-img {
   background: $white;
@@ -13,6 +16,11 @@ footer section {
   border: 1px solid #eceff1;
   position: relative;
   border-radius: 8px;
+  .img-responsive-wrapper .img-responsive .img-wrapper {
+    border-radius: 8px 8px 0 0;
+    overflow: hidden;
+  }
+
   .card-body {
     padding: 0;
     .card-title,
