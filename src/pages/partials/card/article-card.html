@@ -1,6 +1,17 @@
 <div class="card-wrapper">
-  <div class="card">
+  <div class="card {% if withBg %}card-bg{% endif %}{% if withImg %}card-img{% endif %}">
     <div class="card-body">
+      {% if withImg %}
+      <div class="img-responsive-wrapper">
+        <div class="img-responsive">
+          <div class="img-wrapper">
+            {% if src %}
+               <img src="{{src}}" title="img title" alt="imagealt">
+             {% endif %}
+          </div>
+        </div>
+      </div>
+      {% endif %}
       <div class="category-top">
         <a class="category" href="#">Category</a>
         <span class="data">10/12/2018</span>
