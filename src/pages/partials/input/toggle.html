@@ -1,0 +1,10 @@
+  <div class="toggles">
+    <label for="{{ id if id else 'toggle-id' }}">
+      {{ label if label else 'label' }}
+      <input
+        type="checkbox"
+        id="{{ id if id else 'toggle-id' }}"
+        {{ 'disabled' if disabled }} >
+      <span class="lever"></span>
+    </label>
+  </div>
