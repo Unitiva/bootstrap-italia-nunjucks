@@ -168,7 +168,9 @@
                         { title: 'Home', page: 'home', src: 'index.html'},
                         { title: 'News', page: 'news', src: 'news.html'},
                         { title: 'Events', page: 'events', src: 'events.html'},
-                        { title: 'Documents', page: 'documents', src: 'documents.html'} ] %}
+                        { title: 'Documents', page: 'documents', src: 'documents.html'},
+                        { title: 'Typography', page: 'typography', src: 'typography.html'},
+                        { title: 'Simple Page', page: 'base-page', src: 'base-page.html'} ] %}
                       {% for item in header -%}
                         <li class="nav-item {% if active == item.page %}active{% endif %}">
                           <a class="nav-link {% if active == item.page %}active{% endif %}" href="{{item.src}}"><span>{{item.title}}</span></a>
