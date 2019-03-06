@@ -169,8 +169,7 @@
                         { title: 'News', page: 'news', src: 'news.html'},
                         { title: 'Events', page: 'events', src: 'events.html'},
                         { title: 'Documents', page: 'documents', src: 'documents.html'},
-                        { title: 'Images', page: 'images', src: 'images.html'},
-                        { title: 'Files', page: 'files', src: 'files.html'} ] %}
+                        { title: 'Simple Page', page: 'base-page', src: 'base-page.html'} ] %}
                       {% for item in header -%}
                         <li class="nav-item {% if active == item.page %}active{% endif %}">
                           <a class="nav-link {% if active == item.page %}active{% endif %}" href="{{item.src}}"><span>{{item.title}}</span></a>

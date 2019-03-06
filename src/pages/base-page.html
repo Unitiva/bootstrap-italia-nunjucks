@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% include "partials/head/head.html" %}
+  <body>
+    {% set active = 'base-page' %}
+    {% include "partials/header/header.html" %}
+    <div id="main_container">
+      <div class="container">
+        <div class="row">
+          {% include "partials/breadcrumbs/breadcrumbs.html" %}
+        </div>
+        <div class="row">
+          <div class="title">
+            <h2>Simple Page</h2>
+            <p>Descrizione lorem ipsum solem quam naturae soltitude conras. Quentumque orabis pro naturae et fiulim dorius amet.</p>
+          </div>
+          <div class="row">
+            <div class="col-md-8 margin-bottom">
+              <div class="">
+                <p>Phasellus eleifend molestie sapien nec auctor. Praesent vel dolor nec elit blandit accumsan. Vestibulum nibh tortor, laoreet eu fermentum nec,
+                  faucibus eu risus. Aenean elementum laoreet nibh, a ornare dolor vehicula a.
+                  Vivamus nec dignissim est, sed tempus diam. Curabitur at eleifend diam, at bibendum eros. Nunc iaculis felis vitae massa mattis,
+                  at blandit nisl tristique. Phasellus ut ligula a tortor pharetra mollis vitae at erat.
+                  Pellentesque fringilla malesuada magna ut varius. Integer rutrum non dolor non scelerisque. Duis ut arcu vel nunc fermentum dapibus. </p>
+                <p>Vestibulum varius ipsum et nibh sodales bibendum. Ut interdum, tortor non dictum eleifend, quam elit congue metus, eget varius sem turpis et nisi.
+                  Integer vitae mauris tortor. Aenean vulputate a magna lacinia consectetur.</p>
+                  <p>Maecenas ac elit faucibus nulla pulvinar mollis eget nec odio. Suspendisse vitae sodales ipsum. Vestibulum eget dignissim mauris. Praesent fermentum augue at sem consequat, nec fermentum turpis placerat. Duis vel rhoncus erat. Cras congue efficitur metus, a dapibus lectus rutrum vel. Phasellus porta vestibulum tortor, sit amet pretium magna feugiat eu. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque dictum faucibus luctus. Nunc cursus consectetur metus a blandit. Donec nec pretium leo.</p>
+              </div>
+            </div>
+            <div class="col-md-4 margin-bottom">
+              {% set withImg =  true %}
+              {% set src="assets/img/londra.jpg" %}
+              {% include "partials/card/article-card.html" %}
+            </div>
+          </div>
+        </div>
+        <section class="row">
+          {% include "partials/pagination/pagination.html" %}
+        </section>
+      </div>
+    </div>
+
+    {% include "partials/footer/footer.html" %}
+
+    <!-- Notification per tornare alla pagina principale -->
+    <div
+      class="notification dismissable with-icon"
+      role="alert"
+      id="notification-esempi"
+      aria-labelledby="notification-esempi-title"
+    >
+      <h5 id="notification-esempi-title">
+        <svg class="icon">
+          <use xlink:href="./svg/sprite.svg#it-info-circle"></use></svg
+        >Esempio di pagina base
+      </h5>
+      <p>
+        <a href="#">Torna alla pagina principale degli esempi</a>
+      </p>
+      <button type="button" class="btn notification-close">
+        <svg class="icon">
+          <use xlink:href="./svg/sprite.svg#it-close"></use>
+        </svg>
+        <span class="sr-only">Chiudi notifica: Titolo notification</span>
+      </button>
+    </div>
+
+    <script>
+      $(document).ready(function() {
+        notificationShow('notification-esempi')
+      })
+    </script>
+  </body>
+</html>
