@@ -12,29 +12,44 @@
         <div class="row">
           <div class="title">
             <h2>Novità</h2>
-            <p>Eventi culturali e sportivi, comunicati stampa e notizie più importanti sempre aggiornate</p>
+            <p>Comunicati stampa e notizie più importanti sempre aggiornate....lorem ipsum numquam solem</p>
           </div>
           <div class="row row-eq-height">
-            <div class="col-md-4">
-              {% include "partials/card/simple-card.html" %}
+            <div class="col-md-4 margin-bottom">
+              {% set withImg =  true %}
+              {% set src="assets/img/amsterdam.jpg" %}
+              {% include "partials/card/article-card.html" %}
             </div>
-            <div class="col-md-4">
-              {% include "partials/card/simple-card.html" %}
+            <div class="col-md-4 margin-bottom">
+              {% set withImg =  true %}
+              {% set src="assets/img/londra.jpg" %}
+              {% include "partials/card/article-card.html" %}
             </div>
-            <div class="col-md-4">
-              {% include "partials/card/simple-card.html" %}
+            <div class="col-md-4 margin-bottom">
+              {% set withImg =  true %}
+              {% set src="assets/img/budapest.jpg" %}
+              {% include "partials/card/article-card.html" %}
             </div>
-            <div class="col-md-4">
-              {% include "partials/card/simple-card.html" %}
+            <div class="col-md-4 margin-bottom">
+              {% set withImg =  true %}
+              {% set src="assets/img/lisbona.jpg" %}
+              {% include "partials/card/article-card.html" %}
             </div>
-            <div class="col-md-4">
-              {% include "partials/card/simple-card.html" %}
+            <div class="col-md-4 margin-bottom">
+              {% set withImg =  true %}
+              {% set src="assets/img/matera.jpg" %}
+              {% include "partials/card/article-card.html" %}
             </div>
-            <div class="col-md-4">
-              {% include "partials/card/simple-card.html" %}
+            <div class="col-md-4 margin-bottom">
+              {% set withImg =  true %}
+              {% set src="assets/img/napoli.jpg" %}
+              {% include "partials/card/article-card.html" %}
             </div>
           </div>
         </div>
+        <section class="row">
+          {% include "partials/pagination/pagination.html" %}
+        </section>
       </div>
     </div>
 
