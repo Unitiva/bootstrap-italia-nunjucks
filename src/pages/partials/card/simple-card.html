@@ -10,22 +10,29 @@
             </div>
         </div>
       {% endif %}
-      {% if withIcon %}
         <div class="categoryicon-top">
+          {% if withIcon %}
             <svg class="icon">
-              <use xlink:href="/svg/sprite.svg#{{icon}}"></use>
+              <use xlink:href="/svg/sprite.svg#{{icon if icon else 'it-close'}}"></use>
             </svg>
-            <span class="text">Category<br>Name</span>
+          {% endif %}
+            <span class="text">
+              {{ category if category else 'Category name'}}
+            </span>
         </div>
+      <h5 class="card-title">
+        {{ title if title else 'Card title' }}
+      </h5>
+      <p class="card-text">
+        {{ text if text else 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.' }}
+      </p>
+      {% if readMore %}
+        <a class="read-more" href="#"><span class="text">Leggi di più</span>
+          <svg class="icon">
+            <use xlink:href="/svg/sprite.svg#it-arrow-right"></use>
+          </svg>
+        </a>
       {% endif %}
-      <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…</h5>
-      <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-        labore et dolore magna aliqua.</p>
-      <a class="read-more" href="#"><span class="text">Leggi di più</span>
-        <svg class="icon">
-          <use xlink:href="/svg/sprite.svg#it-arrow-right"></use>
-        </svg>
-      </a>
     </div>
   </div>
 </div>

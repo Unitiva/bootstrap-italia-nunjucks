@@ -9,19 +9,19 @@ storiesOf('Card | Simple', module)
   .add('Card with icon', () => SimpleCard,
     {
       withIcon: true,
-      icon: 'it-file'
+      icon: 'it-file',
     }
   )
   .add('Card with icon and shadow', () => SimpleCard,
     {
       withBg: true,
       withIcon: true,
-      icon: 'it-close'
     }
   )
   .add('Card with image and shadow', () => SimpleCard,
     {
       withImg: true,
+      src: '/assets/img/amalfi.jpg',
       withBg: true,
     }
   )
