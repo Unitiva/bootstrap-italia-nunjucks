@@ -9,108 +9,212 @@
         <div class="row">
           {% include "partials/breadcrumbs/breadcrumbs.html" %}
         </div>
+      </div>
+      <div class="container">
         <div class="row">
-          <div class="col-md-12 margin-bottom">
-            <div class="margin-top">
-              <div class="margin-bottom">
-                <h3>Tipography</h3>
-                <h1>Intestazione di tipo h1</h1>
-                <h2>Intestazione di tipo h2</h2>
-                <h3>Intestazione di tipo h3</h3>
-                <h4>Intestazione di tipo h4</h4>
-                <h5>Intestazione di tipo h5</h5>
-                <h6>Intestazione di tipo h6</h6>
+          <div class="margin-bottom">
+            <h3>Tipography</h3>
+            <h1>Intestazione di tipo h1</h1>
+            <h2>Intestazione di tipo h2</h2>
+            <h3>Intestazione di tipo h3</h3>
+            <h4>Intestazione di tipo h4</h4>
+            <h5>Intestazione di tipo h5</h5>
+            <h6>Intestazione di tipo h6</h6>
+          </div>
+          <div class="margin-bottom">
+            <h3>Paragraph</h3>
+            <p>Phasellus eleifend molestie sapien nec auctor. Praesent vel dolor nec elit blandit accumsan. Vestibulum nibh tortor, laoreet eu fermentum nec,
+              faucibus eu risus.Curabitur at eleifend diam, at bibendum eros. Nunc iaculis felis vitae massa mattis,
+              at blandit nisl tristique. <b>Phasellus ut ligula</b> a tortor pharetra mollis vitae at erat.
+              Pellentesque fringilla malesuada magna ut varius. Integer rutrum non dolor non scelerisque. Duis ut arcu vel nunc fermentum dapibus. </p>
+            <p>Vestibulum varius ipsum et nibh sodales bibendum. Ut interdum, tortor non dictum eleifend, quam elit congue metus, eget varius sem turpis et nisi.
+              Integer vitae mauris tortor. <a href="#">Aenean vulputate a magna lacinia consectetur.</a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <section class="bg-second-color margin-top">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 margin-bottom">
+              <h3>Blockquote</h3>
+              <blockquote class="blockquote">
+                <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+              </blockquote>
+            </div>
+            <div class="col-md-12 margin-bottom">
+              <h3>Cite</h3>
+              <cite>Maecenas ac elit faucibus nulla pulvinar mollis eget nec odio.</cite>
+            </div>
+            <div class="col-md-12 margin-bottom">
+              <h3>Listing</h3>
+              <ul>
+                <li>Phasellus iaculis neque</li>
+                <li>Purus sodales ultricies</li>
+                <li>Vestibulum laoreet porttitor sem</li>
+                <li>Ac tristique libero volutpat at</li>
+              </ul>
+            </div>
+            <div class="col-md-12 margin-bottom">
+              <h3>Paragrafo personalizzato</h3>
+              <p>Esempio di testo <u>sottolineato</u>.</p>
+              <p>Esempio di testo <mark>evidenziato</mark>.</p>
+              <p>Esempio di testo <em>corsivo</em>.</p>
+              <p>Esempio di testo <strong>in grassetto</strong>.</p>
+              <p>Esempio di testo <small>rimpicciolito</small>.</p>
+              <p>Esempio di testo <ins>aggiuntivo</ins>.</p>
+              <p>Esempio di testo <del>cancellato</del> o <s>invalido</s>.</p>
+              <p>Esempio di testo <code>monospace</code>.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="container">
+        <div class="row">
+          <div class="margin-bottom">
+            <h3>Tabelle</h3>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Nome</th>
+                  <th scope="col">Cognome</th>
+                  <th scope="col">Username</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>Mario</td>
+                  <td>Verdi</td>
+                  <td>mario.verdi</td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>Francesco</td>
+                  <td>Bianchi</td>
+                  <td>francesco.bianchi</td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td>Alessandro</td>
+                  <td>Rossi</td>
+                  <td>alessandro.rossi</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <section class="bg-second-color">
+        <div class="container">
+          <h3>Radio button</h3>
+          <div class="row">
+            <div class="col-5">
+              <div class="form-check form-check-group">
+                <input name="gruppo4" type="radio" id="radio10" checked>
+                <label for="radio10">Opzione 1</label>
               </div>
-              <div class="margin-bottom">
-                <h3>Paragraph</h3>
-                <p>Phasellus eleifend molestie sapien nec auctor. Praesent vel dolor nec elit blandit accumsan. Vestibulum nibh tortor, laoreet eu fermentum nec,
-                  faucibus eu risus.Curabitur at eleifend diam, at bibendum eros. Nunc iaculis felis vitae massa mattis,
-                  at blandit nisl tristique. <b>Phasellus ut ligula</b> a tortor pharetra mollis vitae at erat.
-                  Pellentesque fringilla malesuada magna ut varius. Integer rutrum non dolor non scelerisque. Duis ut arcu vel nunc fermentum dapibus. </p>
-                <p>Vestibulum varius ipsum et nibh sodales bibendum. Ut interdum, tortor non dictum eleifend, quam elit congue metus, eget varius sem turpis et nisi.
-                  Integer vitae mauris tortor. <a href="#">Aenean vulputate a magna lacinia consectetur.</a>
-                </p>
+              <div class="form-check form-check-group">
+                <input name="gruppo4" type="radio" id="radio11">
+                <label for="radio11">Opzione 2</label>
               </div>
-              <div class="margin-bottom">
-                <h3>Blockquote</h3>
-                <blockquote class="blockquote">
-                  <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-                  <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
-                </blockquote>
+              <div class="form-check form-check-group">
+                <input name="gruppo4" type="radio" id="radio12" disabled>
+                <label for="radio12" class="disabled">Opzione disabilitata</label>
               </div>
-              <div class="margin-bottom">
-                <h3>Cite</h3>
-                <cite>Maecenas ac elit faucibus nulla pulvinar mollis eget nec odio.</cite>
+            </div>
+            <div class="col-2"></div>
+            <div class="col-5">
+              <div class="form-check form-check-group">
+                <input checked name="gruppo5" type="radio" id="radio13" aria-labelledby="radio13-help">
+                <label for="radio13">Opzione 1</label>
+                <small id="radio13-help" class="form-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas molestie libero</small>
               </div>
-              <div class="margin-bottom">
-                <h3>Listing</h3>
-                <ul>
-                  <li>Phasellus iaculis neque</li>
-                  <li>Purus sodales ultricies</li>
-                  <li>Vestibulum laoreet porttitor sem</li>
-                  <li>Ac tristique libero volutpat at</li>
-                </ul>
+              <div class="form-check form-check-group">
+                <input name="gruppo5" type="radio" id="radio14" aria-labelledby="radio14-help">
+                <label for="radio14">Opzione 2</label>
+                <small id="radio14-help" class="form-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas molestie libero</small>
               </div>
-              <div class="margin-bottom">
-                <h3>Paragrafo personalizzato</h3>
-                <p>Esempio di testo <u>sottolineato</u>.</p>
-                <p>Esempio di testo <mark>evidenziato</mark>.</p>
-                <p>Esempio di testo <em>corsivo</em>.</p>
-                <p>Esempio di testo <strong>in grassetto</strong>.</p>
-                <p>Esempio di testo <small>rimpicciolito</small>.</p>
-                <p>Esempio di testo <ins>aggiuntivo</ins>.</p>
-                <p>Esempio di testo <del>cancellato</del> o <s>invalido</s>.</p>
-                <p>Esempio di testo <code>monospace</code>.</p>
+              <div class="form-check form-check-group">
+                <input name="gruppo5" type="radio" id="radio15" aria-labelledby="radio15-help" disabled="disabled">
+                <label for="radio15" class="disabled">Opzione disabilitata</label>
+                <small id="radio15-help" class="form-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas molestie libero</small>
               </div>
-              <div class="margin-bottom">
-                <h3>Tabelle</h3>
-                <table class="table">
-                  <thead>
-                    <tr>
-                      <th scope="col">#</th>
-                      <th scope="col">Nome</th>
-                      <th scope="col">Cognome</th>
-                      <th scope="col">Username</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <th scope="row">1</th>
-                      <td>Mario</td>
-                      <td>Verdi</td>
-                      <td>mario.verdi</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">2</th>
-                      <td>Francesco</td>
-                      <td>Bianchi</td>
-                      <td>francesco.bianchi</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">3</th>
-                      <td>Alessandro</td>
-                      <td>Rossi</td>
-                      <td>alessandro.rossi</td>
-                    </tr>
-                  </tbody>
-                </table>
+            </div>
+          </div>
+          <h3>Checkbox</h3>
+          <div class="row">
+            <div class="col-5">
+              <div class="form-check form-check-group">
+                <input id="checkbox6" type="checkbox" checked="checked">
+                <label for="checkbox6">Checkbox selezionato</label>
               </div>
-              <div class="margin-bottom">
-                <h3>Blocco di codice</h3>
-                <pre>
-                  <code>&lt;p&gt;Testo di esempio qui...&lt;/p&gt;
-                  &lt;p&gt;E un'altra linea di testo di esempio qui...&lt;/p&gt;
-                  </code>
-                </pre>
+              <div class="form-check form-check-group">
+                <input id="checkbox7" type="checkbox">
+                <label for="checkbox7">Checkbox non selezionato</label>
               </div>
+              <div class="form-check form-check-group">
+                <input id="checkbox8" type="checkbox" disabled="disabled">
+                <label for="checkbox8" class="disabled">Checkbox disabilitato non selezionato</label>
+              </div>
+            </div>
+            <div class="col-2"></div>
+            <div class="col-5">
+              <div class="form-check form-check-group">
+                <input id="checkbox9" type="checkbox" aria-labelledby="checkbox9-help" checked="checked">
+                <label for="checkbox9">Checkbox selezionato</label>
+                <small id="checkbox9-help" class="form-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas molestie libero</small>
+              </div>
+              <div class="form-check form-check-group">
+                <input id="checkbox10" type="checkbox" aria-labelledby="checkbox10-help">
+                <label for="checkbox10">Checkbox non selezionato</label>
+                <small id="checkbox10-help" class="form-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas molestie libero</small>
+              </div>
+              <div class="form-check form-check-group">
+                <input id="checkbox11" type="checkbox" aria-labelledby="checkbox11-help" disabled="disabled">
+                <label for="checkbox11" class="disabled">Checkbox disabilitato non selezionato</label>
+                <small id="checkbox11-help" class="form-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas molestie libero</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="container">
+        <h3>Form</h3>
+        <div class="row margin-top">
+          <div class="form-group">
+            <input type="text" class="form-control" id="exampleInputText">
+            <label for="exampleInputText">Campo di tipo testuale</label>
+          </div>
+          <div class="form-group">
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-labelledby="emailHelp1">
+            <label for="exampleInputEmail1">Campo di tipo email</label>
+          </div>
+          <div class="form-group">
+            <input type="number" class="form-control" id="exampleInputNumber">
+            <label for="exampleInputNumber">Campo di tipo numerico</label>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <input type="tel" class="form-control" id="exampleInputTelephone">
+              <label for="exampleInputTelephone">Campo di tipo telefono</label>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <input type="time" class="form-control" id="exampleInputTime" min="9:00" max="18:00">
+              <label for="exampleInputTime">Campo di tipo ora</label>
             </div>
           </div>
         </div>
       </div>
     </div>
-
     {% include "partials/footer/footer.html" %}
-
+    <div id="topcontrol" class="topcontrol" title="Torna su">
+       <i class="fas fa-arrow-alt-circle-up"></i>
+    </div>
     <!-- Notification per tornare alla pagina principale -->
     <div
       class="notification dismissable with-icon"
