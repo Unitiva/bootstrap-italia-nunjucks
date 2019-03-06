@@ -16,15 +16,29 @@
             <p>Eventi culturali, sportivi, lorem ipsum quam solem vitae essentia</p>
           </div>
           <div class="row row-eq-height">
-            <div class="col-md-6 margin-bottom">
+            <div class="col-md-4 margin-bottom">
               {% set withImg =  true %}
-              {% set src="assets/img/amsterdam.jpg" %}
+              {% set cardEvent =  true %}
+              {% set src="assets/img/ortisei.jpg" %}
               {% include "partials/card/article-card.html" %}
             </div>
-            <div class="col-md-6 margin-bottom">
+            <div class="col-md-4 margin-bottom">
               {% set withImg =  true %}
-              {% set src="assets/img/londra.jpg" %}
+              {% set cardEvent =  true %}
+              {% set src="assets/img/roma.jpg" %}
               {% include "partials/card/article-card.html" %}
+            </div>
+            <div class="col-md-4 margin-bottom">
+              <div class="">
+                {% set withImg =  false %}
+                {% set cardEvent =  true %}
+                {% include "partials/card/article-card.html" %}
+              </div>
+              <div class="">
+                {% set withImg =  false %}
+                {% set cardEvent =  true %}
+                {% include "partials/card/article-card.html" %}
+              </div>
             </div>
           </div>
         </div>

@@ -1,5 +1,20 @@
+.owl-carousel {
+  z-index: 0;
+}
+
 section {
   margin: 3em 0;
+}
+
+.it-header-wrapper {
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  top: 0;
+}
+
+#main_container {
+  margin-top: 208px;
 }
 
 footer section {
@@ -10,36 +25,87 @@ footer section {
   margin-bottom: 1.5em;
 }
 
-.card-img {
-  background: $white;
-  box-shadow: 4px 4px 8px 0 rgba(0,0,0,0.1);
-  border: 1px solid #eceff1;
-  position: relative;
-  border-radius: 8px;
-  .img-responsive-wrapper .img-responsive .img-wrapper {
-    border-radius: 8px 8px 0 0;
-    overflow: hidden;
+.card {
+
+  .read-more {
+    position: relative;
+    bottom: auto;
+    margin: 1em 0;
   }
-  .category-top {
-    padding: 12px 24px 0;
-  }
-  .card-body {
-    padding: 0;
-    .card-title {
-      padding: 12px 24px 0;
+
+  &.card-img {
+    background: $white;
+    box-shadow: $border-radius $border-radius $border-radius-lg 0 rgba(0,0,0,0.1);
+    border: 1px solid #eceff1;
+    position: relative;
+    border-radius: $border-radius-lg;
+
+    .img-responsive-wrapper .img-responsive .img-wrapper {
+      border-radius: $border-radius-lg $border-radius-lg 0 0;
+      overflow: hidden;
     }
-    .card-text,
-    .read-more,
+
+    .category-top {
+      padding: $dropdown-item-padding-y $breadcrumb-padding 0;
+    }
+
+    .card-body {
+      padding: 0;
+      .card-title {
+        padding: $dropdown-item-padding-y $breadcrumb-padding 0;
+      }
+
+      .card-text,
+      .read-more,
+      .card-signature {
+        padding-left: $breadcrumb-padding;
+        padding-right: $breadcrumb-padding;
+      }
+    }
+  }
+
+  &.card-event {
+    background: $white;
+    box-shadow: $border-radius $border-radius $border-radius-lg 0 rgba(0,0,0,0.1);
+    border: 1px solid #eceff1;
+    position: relative;
+    border-radius: $border-radius-lg;
+
     .card-signature {
-      padding-left: 24px;
-      padding-right: 24px;
+      display: none;
     }
-    .read-more {
-      position: relative;
-      bottom: auto;
-      margin: 1em 0;
+
+    .card-body {
+      .category-top {
+        position: relative;
+
+        .category {
+          display: none;
+        }
+      }
+
+      .data {
+        background-color: $white;
+        max-width: 50%;
+        padding: 0;
+        font-size: 1.3em;
+        font-weight: bold;
+        letter-spacing: 1px;
+        color: $primary;
+        &::before {
+          display: none;
+        }
+      }
+    }
+
+    &.card-img .card-body .data {
+      margin: -60px auto 0;
+      position: absolute;
+      padding: $dropdown-item-padding-y;
+      border-radius: $border-radius-sm $border-radius-sm 0 0;
     }
   }
+
   &::after {
     display: none;
   }
