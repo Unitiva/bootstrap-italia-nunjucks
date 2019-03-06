@@ -145,7 +145,7 @@
               </div>
             </div>
           </div>
-          <h3>checkbox</h3>
+          <h3>Checkbox</h3>
           <div class="row">
             <div class="col-5">
               <div class="form-check form-check-group">
@@ -182,11 +182,35 @@
           </div>
         </div>
       </section>
-
-
-
-
-
+      <div class="container">
+        <h3>Form</h3>
+        <div class="row margin-top">
+          <div class="form-group">
+            <input type="text" class="form-control" id="exampleInputText">
+            <label for="exampleInputText">Campo di tipo testuale</label>
+          </div>
+          <div class="form-group">
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-labelledby="emailHelp1">
+            <label for="exampleInputEmail1">Campo di tipo email</label>
+          </div>
+          <div class="form-group">
+            <input type="number" class="form-control" id="exampleInputNumber">
+            <label for="exampleInputNumber">Campo di tipo numerico</label>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <input type="tel" class="form-control" id="exampleInputTelephone">
+              <label for="exampleInputTelephone">Campo di tipo telefono</label>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <input type="time" class="form-control" id="exampleInputTime" min="9:00" max="18:00">
+              <label for="exampleInputTime">Campo di tipo ora</label>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     {% include "partials/footer/footer.html" %}
