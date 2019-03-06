@@ -110,58 +110,81 @@
 
       <section class="bg-second-color">
         <div class="container">
-          <h3>Form</h3>
-          <div class="row margin-bottom">
-            <div class="col-md-4">
-              <label for="inputNumber" class="input-number-label">Input Number</label>
-              <span class="input-number">
-                <input type="number" id="inputNumber" name="inputNumber" value="100">
-                <button class="input-number-add">
-                  <span class="sr-only">Aumenta valore</span>
-                </button>
-                <button class="input-number-sub">
-                  <span class="sr-only">Diminuisci valore</span>
-                </button>
-              </span>
+          <h3>Radio button</h3>
+          <div class="row">
+            <div class="col-5">
+              <div class="form-check form-check-group">
+                <input name="gruppo4" type="radio" id="radio10" checked>
+                <label for="radio10">Opzione 1</label>
+              </div>
+              <div class="form-check form-check-group">
+                <input name="gruppo4" type="radio" id="radio11">
+                <label for="radio11">Opzione 2</label>
+              </div>
+              <div class="form-check form-check-group">
+                <input name="gruppo4" type="radio" id="radio12" disabled>
+                <label for="radio12" class="disabled">Opzione disabilitata</label>
+              </div>
             </div>
-            <div class="col-md-4">
-              <label for="inputNumber5" class="input-number-label">Disabled</label>
-              <span class="input-number disabled">
-                <input type="number" id="inputNumber5" name="inputNumber5" value="50" min="0" max="100" step="1" disabled>
-                <button class="input-number-add" disabled>
-                  <span class="sr-only">Aumenta valore</span>
-                </button>
-                <button class="input-number-sub" disabled>
-                  <span class="sr-only">Diminuisci valore</span>
-                </button>
-              </span>
+            <div class="col-2"></div>
+            <div class="col-5">
+              <div class="form-check form-check-group">
+                <input checked name="gruppo5" type="radio" id="radio13" aria-labelledby="radio13-help">
+                <label for="radio13">Opzione 1</label>
+                <small id="radio13-help" class="form-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas molestie libero</small>
+              </div>
+              <div class="form-check form-check-group">
+                <input name="gruppo5" type="radio" id="radio14" aria-labelledby="radio14-help">
+                <label for="radio14">Opzione 2</label>
+                <small id="radio14-help" class="form-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas molestie libero</small>
+              </div>
+              <div class="form-check form-check-group">
+                <input name="gruppo5" type="radio" id="radio15" aria-labelledby="radio15-help" disabled="disabled">
+                <label for="radio15" class="disabled">Opzione disabilitata</label>
+                <small id="radio15-help" class="form-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas molestie libero</small>
+              </div>
             </div>
-            <div class="col-md-4">
-              <label for="inputNumber6" class="input-number-label">Adattivo</label>
-              <span class="input-number input-number-adaptive">
-                <input type="number" id="inputNumber6" name="inputNumber6" value="99999" step="1">
-                <button class="input-number-add">
-                  <span class="sr-only">Aumenta valore</span>
-                </button>
-                <button class="input-number-sub">
-                  <span class="sr-only">Diminuisci valore</span>
-                </button>
-              </span>
+          </div>
+          <h3>checkbox</h3>
+          <div class="row">
+            <div class="col-5">
+              <div class="form-check form-check-group">
+                <input id="checkbox6" type="checkbox" checked="checked">
+                <label for="checkbox6">Checkbox selezionato</label>
+              </div>
+              <div class="form-check form-check-group">
+                <input id="checkbox7" type="checkbox">
+                <label for="checkbox7">Checkbox non selezionato</label>
+              </div>
+              <div class="form-check form-check-group">
+                <input id="checkbox8" type="checkbox" disabled="disabled">
+                <label for="checkbox8" class="disabled">Checkbox disabilitato non selezionato</label>
+              </div>
+            </div>
+            <div class="col-2"></div>
+            <div class="col-5">
+              <div class="form-check form-check-group">
+                <input id="checkbox9" type="checkbox" aria-labelledby="checkbox9-help" checked="checked">
+                <label for="checkbox9">Checkbox selezionato</label>
+                <small id="checkbox9-help" class="form-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas molestie libero</small>
+              </div>
+              <div class="form-check form-check-group">
+                <input id="checkbox10" type="checkbox" aria-labelledby="checkbox10-help">
+                <label for="checkbox10">Checkbox non selezionato</label>
+                <small id="checkbox10-help" class="form-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas molestie libero</small>
+              </div>
+              <div class="form-check form-check-group">
+                <input id="checkbox11" type="checkbox" aria-labelledby="checkbox11-help" disabled="disabled">
+                <label for="checkbox11" class="disabled">Checkbox disabilitato non selezionato</label>
+                <small id="checkbox11-help" class="form-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas molestie libero</small>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <div class="container">
-        <div class="row">
-          <div class="it-datepicker-wrapper">
-            <div class="form-group">
-              <input class="form-control it-date-datepicker" id="date1" type="text" placeholder="inserisci la data in formato gg/mm/aaaa">
-              <label for="date1">Date label</label>
-            </div>
-          </div>
-        </div>
-      </div>
+
+
 
 
     </div>
