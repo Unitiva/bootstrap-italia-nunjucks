@@ -376,7 +376,7 @@ a.read-more {
 //Tablet horizontal / small desktop
 @media (min-width: #{map-get($grid-breakpoints, lg)}) {
   .card-wrapper {
-    padding-bottom: 0;
+    //padding-bottom: 0;
     &.card-space {
       padding-bottom: $card-padding/2;
     }

@@ -25,11 +25,33 @@
                 title: "Bandi mobilità e strade"
               },
               {
+                icon: "it-card",
+                category: "Finanza",
+                title: "Finanziamenti alle imprese"
+              },
+              {
+                icon: "it-pa",
+                category: "Impresa",
+                title: "Investitori del futuro"
+              },
+              {
+                icon: "it-file",
+                category: "Bandi",
+                title: "Bando rivalutazione zone periferiche"
+              },
+              {
+                icon: "it-note",
+                category: "Bandi",
+                title: "Scadenza Bando Strade pulite"
+              },
+              {
                 icon: "it-file",
                 category: "Concorsi",
                 title: "Concorso gestione spazi pedonali"
               } ] %}
           {% set withIcon = true %}
+          {% set withBg = true %}
+          {% set readMore = true %}
           {% for item in items %}
             {% set icon = item.icon %}
             {% set title = item.title %}
