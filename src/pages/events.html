@@ -5,15 +5,74 @@
     {% set active = 'events' %}
     {% include "partials/header/header.html" %}
 
-    <div class="container my-4">
-      <h1>Events</h1>
-      <p>
-        Ab illo tempore, ab est sed immemorabili.<br />
-        Ullamco laboris nisi ut aliquid ex ea commodi consequat.<br />
-        Quis aute iure reprehenderit in voluptate velit esse.<br />
-        Petierunt uti sibi concilium totius Galliae in diem certam indicere.
-      </p>
-      <p>Pellentesque habitant morbi tristique senectus et netus.</p>
+    <div id="main_container">
+      <div class="container">
+        <div class="row">
+          {% include "partials/breadcrumbs/breadcrumbs.html" %}
+        </div>
+        <div class="row">
+          <div class="title">
+            <h2>Eventi in programma</h2>
+            <p>Eventi culturali, sportivi, lorem ipsum quam solem vitae essentia</p>
+          </div>
+          <div class="row">
+            <div class="col-md-6 margin-bottom">
+              {% set withImg =  true %}
+              {% set cardEvent =  true %}
+              {% set src="assets/img/ortisei.jpg" %}
+              {% include "partials/card/article-card.html" %}
+            </div>
+            <div class="col-md-6 margin-bottom">
+              {% set withImg =  true %}
+              {% set cardEvent =  true %}
+              {% set src="assets/img/roma.jpg" %}
+              {% include "partials/card/article-card.html" %}
+            </div>
+          </div>
+          <div class="row">
+            {% include "partials/pagination/pagination.html" %}
+          </div>
+        </div>
+      </div>
+      <div class="bg-second-color margin-top">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 margin-bottom">
+              <h3>Eventi trascorsi</h3>
+            </div>
+            <div class="col-md-4 margin-bottom">
+              {% set withImg =  false %}
+              {% set cardEvent =  true %}
+              {% include "partials/card/article-card.html" %}
+            </div>
+            <div class="col-md-4 margin-bottom">
+              {% set withImg =  false %}
+              {% set cardEvent =  true %}
+              {% include "partials/card/article-card.html" %}
+            </div>
+            <div class="col-md-4 margin-bottom">
+              {% set withImg =  false %}
+              {% set cardEvent =  true %}
+              {% include "partials/card/article-card.html" %}
+            </div>
+            <div class="col-md-4 margin-bottom">
+              {% set withImg =  false %}
+              {% set cardEvent =  true %}
+              {% include "partials/card/article-card.html" %}
+            </div>
+            <div class="col-md-4 margin-bottom">
+              {% set withImg =  false %}
+              {% set cardEvent =  true %}
+              {% include "partials/card/article-card.html" %}
+            </div>
+            <div class="col-md-4 margin-bottom">
+              {% set withImg =  false %}
+              {% set cardEvent =  true %}
+              {% include "partials/card/article-card.html" %}
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     {% include "partials/footer/footer.html" %}
