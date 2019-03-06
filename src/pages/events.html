@@ -5,15 +5,33 @@
     {% set active = 'events' %}
     {% include "partials/header/header.html" %}
 
-    <div class="container my-4">
-      <h1>Events</h1>
-      <p>
-        Ab illo tempore, ab est sed immemorabili.<br />
-        Ullamco laboris nisi ut aliquid ex ea commodi consequat.<br />
-        Quis aute iure reprehenderit in voluptate velit esse.<br />
-        Petierunt uti sibi concilium totius Galliae in diem certam indicere.
-      </p>
-      <p>Pellentesque habitant morbi tristique senectus et netus.</p>
+    <div id="main_container">
+      <div class="container">
+        <div class="row">
+          {% include "partials/breadcrumbs/breadcrumbs.html" %}
+        </div>
+        <div class="row">
+          <div class="title">
+            <h2>Eventi</h2>
+            <p>Eventi culturali, sportivi, lorem ipsum quam solem vitae essentia</p>
+          </div>
+          <div class="row row-eq-height">
+            <div class="col-md-6 margin-bottom">
+              {% set withImg =  true %}
+              {% set src="assets/img/amsterdam.jpg" %}
+              {% include "partials/card/article-card.html" %}
+            </div>
+            <div class="col-md-6 margin-bottom">
+              {% set withImg =  true %}
+              {% set src="assets/img/londra.jpg" %}
+              {% include "partials/card/article-card.html" %}
+            </div>
+          </div>
+        </div>
+        <section class="row">
+          {% include "partials/pagination/pagination.html" %}
+        </section>
+      </div>
     </div>
 
     {% include "partials/footer/footer.html" %}
