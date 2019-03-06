@@ -1,6 +1,7 @@
 import { storiesOf } from '@storybook/html'
 import Input from './input.html'
 import InputPassword from './input-password.html'
+import Toggle from './toggle.html'
 
 storiesOf('Form elements | input', module)
   .add('text', () => Input, { label: 'input type text label'})
@@ -20,3 +21,7 @@ storiesOf('Form elements | password', module)
       label: 'input type password label',
       strengthMeter: true
     })
+
+storiesOf('Form elements | toggle', module)
+  .add('toggle', () => Toggle )
+  .add('toggle disabled', () => Toggle, { disabled: 'disabled' } )
