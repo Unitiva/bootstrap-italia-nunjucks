@@ -112,6 +112,7 @@
 @import 'custom/rating';
 @import 'custom/dimmer';
 @import 'custom/timeline';
+@import 'custom/calendar';
 
 // datepicker
 @import 'custom/form-datepicker';
@@ -140,3 +141,6 @@
 //gestione dei focus
 @import 'utilities/focus';
 @import 'utilities/icons';
+
+// correzione stile esempio
+@import 'custom/style';

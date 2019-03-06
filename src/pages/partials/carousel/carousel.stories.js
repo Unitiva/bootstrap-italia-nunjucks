@@ -1,6 +1,7 @@
 import { storiesOf } from '@storybook/html'
-import * as Carousel from './carousel.html'
+import Carousel from './carousel.html'
+import CarouselArticle from './carousel-articles.html'
 
-storiesOf('Carousel', module).add('Carousel', () => Carousel , {
-  notes: 'A very simple component',
-})
+storiesOf('Carousel', module)
+  .add('Carousel', () => Carousel )
+  .add('CarouselArticle', () => CarouselArticle )

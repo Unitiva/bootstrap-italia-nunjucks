@@ -57,6 +57,7 @@ const Paths = {
     'src/js/plugins/select.js',
     'src/js/plugins/rating.js',
     'src/js/plugins/dimmer.js',
+    'src/js/header-resize.js',
     'src/js/' + pkg.name + '.js',
   ],
 

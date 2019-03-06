@@ -5,7 +5,7 @@ import InfiniteBar from './infinite-bar.html'
 import Spinner from './spinner.html'
 import ButtonProgress from './button-progress.html'
 
-storiesOf('Progress', module)
+storiesOf('Progress Indicators', module)
   .add('50% Progress bar', () => Bar )
   .add('infinite Progress bar', () => InfiniteBar )
   .add('spinner', () => Spinner )
