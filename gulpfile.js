@@ -7,7 +7,7 @@ const gulp = require('gulp'),
   concat = require('gulp-concat'),
   uglify = require('gulp-uglify'),
   babel = require('gulp-babel'),
-  htmlmin = require('gulp-htmlmin'),
+  //htmlmin = require('gulp-htmlmin'),
   imagemin = require('gulp-imagemin'),
   replace = require('gulp-replace'),
   header = require('gulp-header'),
@@ -15,8 +15,11 @@ const gulp = require('gulp'),
   touch = require('gulp-touch-cmd'),
   svgSprite = require('gulp-svg-sprite'),
   browserSync = require('browser-sync').create(),
-  pkg = require('./package.json'),
+  //pkg = require('./package.json'),
   nunjucks = require('gulp-nunjucks')
+
+// !!
+var pkg = { name: 'bootstrap-italia'}
 
 const Paths = {
   VENDOR_JS: [
@@ -26,42 +29,16 @@ const Paths = {
     'node_modules/bootstrap-select/js/bootstrap-select.js',
     'node_modules/bootstrap-select/js/i18n/defaults-it_IT.js',
     'node_modules/owl.carousel/dist/owl.carousel.js',
+    'node_modules/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js'
   ],
   SOURCE_JS: [
-    'src/js/plugins/circular-loader/CircularLoader-v1.3.js',
-    'src/js/plugins/password-strength-meter/password-strength-meter.js',
-    'src/js/plugins/datepicker/locales/it.js',
-    'src/js/plugins/datepicker/datepicker.js',
-    'src/js/plugins/i-sticky/i-sticky.js',
-    'src/js/plugins/fonts-loader.js',
-    'src/js/plugins/autocomplete.js',
-    'src/js/plugins/back-to-top.js',
-    'src/js/plugins/componente-base.js',
-    'src/js/plugins/cookiebar.js',
-    'src/js/plugins/dropdown.js',
-    'src/js/plugins/forms.js',
-    'src/js/plugins/track-focus.js',
-    'src/js/plugins/forward.js',
-    'src/js/plugins/navbar.js',
-    'src/js/plugins/navscroll.js',
-    'src/js/plugins/history-back.js',
-    'src/js/plugins/notifications.js',
-    'src/js/plugins/upload.js',
-    'src/js/plugins/progress-donut.js',
-    'src/js/plugins/list.js',
-    'src/js/plugins/imgresponsive.js',
-    //'src/js/plugins/timepicker.js',
-    'src/js/plugins/input-number.js',
-    'src/js/plugins/carousel.js',
-    'src/js/plugins/transfer.js',
-    'src/js/plugins/select.js',
-    'src/js/plugins/rating.js',
-    'src/js/plugins/dimmer.js',
     'src/js/header-resize.js',
-    'src/js/' + pkg.name + '.js',
+    'src/js/index.js',
   ],
 
-  SOURCE_SCSS: 'src/scss/' + pkg.name + '.scss',
+  VENDOR_SVG: 'node_modules/bootstrap-italia/dist/svg/sprite.svg',
+  VENDOR_FONTS: 'node_modules/bootstrap-italia/dist/fonts/**',
+  SOURCE_SCSS: 'src/scss/index.scss',
   DIST: 'dist',
   SCSS_WATCH: 'src/scss/**/**',
   JS_WATCH: 'src/js/**/**',
@@ -107,7 +84,8 @@ gulp.task('scss-min', () => {
     .pipe(header(bootstrapItaliaBanner, { pkg: pkg }))
     .pipe(
       rename({
-        suffix: '.min',
+        basename: "style",
+        suffix: '.min'
       })
     )
     .pipe(sourcemaps.write('.'))
@@ -186,6 +164,12 @@ gulp.task('js-bundle-min', () => {
     .pipe(touch())
 })
 
+gulp.task('vendor-svg', function() {
+  return gulp
+    .src(Paths.VENDOR_SVG)
+    .pipe(gulp.dest(Paths.DIST + '/svg'))
+})
+
 gulp.task('svg-sprite', function() {
   return gulp
     .src('src/svg/it-*.svg')
@@ -219,6 +203,13 @@ gulp.task('assets', () => {
 })
 
 // Fonts
+gulp.task('vendor-fonts', () => {
+  return gulp
+    .src([Paths.VENDOR_FONTS])
+    .pipe(gulp.dest(Paths.DIST + '/fonts'))
+    .pipe(touch())
+})
+
 gulp.task('fonts', () => {
   return gulp
     .src(['src/fonts/**'])
@@ -231,11 +222,13 @@ gulp.task('fonts', () => {
 gulp.task(
   'build-library',
   gulp.series(
-    'svg-sprite',
+    'vendor-svg',
+    //'svg-sprite',
     'scss-min',
     'js-min',
     'js-bundle-min',
-    'fonts',
+    'vendor-fonts',
+    //'fonts',
     'assets'
   )
 )
