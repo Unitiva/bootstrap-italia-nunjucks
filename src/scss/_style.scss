@@ -29,7 +29,19 @@ section {
 }
 
 #main_container {
-  margin-top: 208px;
+  margin-top: 111px;
+}
+
+@media screen and (min-width: 575px) {
+  #main_container {
+    margin-top: 116px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  #main_container {
+    margin-top: 208px;
+  }
 }
 
 footer section {
