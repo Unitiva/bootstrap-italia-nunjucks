@@ -1,6 +1,151 @@
-@import '_variables.scss';
-@import '../../node_modules/bootstrap-italia/src/scss/bootstrap-italia.scss';
-@import 'custom/_header';
-@import 'custom/_card.scss';
-@import 'custom/_calendar.scss';
-@import '_style.scss';
+@import '../../node_modules/bootstrap-select/sass/bootstrap-select';
+
+@import '../../node_modules/owl.carousel/src/scss/core';
+@import '../../node_modules/owl.carousel/src/scss/animate';
+@import '../../node_modules/owl.carousel/src/scss/autoheight';
+
+// funzioni e variabili colore
+@import '../../node_modules/bootstrap-italia/src/scss/functions';
+@import '../../node_modules/bootstrap-italia/src/scss/utilities/colors_vars';
+
+//variables
+@import '../../node_modules/bootstrap-italia/src/scss/variables';
+@import 'variables';
+
+//classi colore
+@import '../../node_modules/bootstrap-italia/src/scss/utilities/colors';
+
+@import '../../node_modules/bootstrap/scss/functions';
+@import '../../node_modules/bootstrap/scss/variables';
+
+// mixins
+@import '../../node_modules/bootstrap/scss/mixins';
+@import '../../node_modules/bootstrap-italia/src/scss/custom/mixins/buttons';
+@import '../../node_modules/bootstrap-italia/src/scss/custom/mixins/text-emphasis';
+
+@import '../../node_modules/bootstrap/scss/root';
+@import '../../node_modules/bootstrap/scss/print';
+@import '../../node_modules/bootstrap/scss/reboot';
+@import '../../node_modules/bootstrap/scss/type';
+@import '../../node_modules/bootstrap/scss/images';
+@import '../../node_modules/bootstrap/scss/code';
+@import '../../node_modules/bootstrap/scss/grid';
+@import '../../node_modules/bootstrap/scss/tables';
+@import '../../node_modules/bootstrap/scss/forms';
+@import '../../node_modules/bootstrap/scss/buttons';
+@import '../../node_modules/bootstrap/scss/transitions';
+@import '../../node_modules/bootstrap/scss/dropdown';
+@import '../../node_modules/bootstrap/scss/button-group';
+@import '../../node_modules/bootstrap/scss/input-group';
+@import '../../node_modules/bootstrap/scss/nav';
+@import '../../node_modules/bootstrap/scss/navbar';
+@import '../../node_modules/bootstrap/scss/card';
+@import '../../node_modules/bootstrap/scss/breadcrumb';
+@import '../../node_modules/bootstrap/scss/pagination';
+@import '../../node_modules/bootstrap/scss/badge';
+@import '../../node_modules/bootstrap/scss/progress';
+@import '../../node_modules/bootstrap/scss/media';
+@import '../../node_modules/bootstrap/scss/list-group';
+@import '../../node_modules/bootstrap/scss/close';
+@import '../../node_modules/bootstrap/scss/modal';
+@import '../../node_modules/bootstrap/scss/tooltip';
+@import '../../node_modules/bootstrap/scss/popover';
+@import '../../node_modules/bootstrap/scss/carousel';
+@import '../../node_modules/bootstrap/scss/utilities';
+@import '../../node_modules/bootstrap/scss/spinners';
+@import '../../node_modules/bootstrap/scss/toasts';
+
+// Customizzazioni e nuovi componenti
+@import '../../node_modules/bootstrap-italia/src/scss/custom/type';
+@import '../../node_modules/bootstrap-italia/src/scss/custom/grid';
+@import '../../node_modules/bootstrap-italia/src/scss/custom/tables';
+@import '../../node_modules/bootstrap-italia/src/scss/custom/breadcrumb';
+@import '../../node_modules/bootstrap-italia/src/scss/custom/modal';
+@import '../../node_modules/bootstrap-italia/src/scss/custom/collapse';
+@import '../../node_modules/bootstrap-italia/src/scss/custom/carousel';
+@import '../../node_modules/bootstrap-italia/src/scss/custom/alert';
+@import '../../node_modules/bootstrap-italia/src/scss/custom/buttons';
+@import '../../node_modules/bootstrap-italia/src/scss/custom/forms';
+@import '../../node_modules/bootstrap-italia/src/scss/custom/form-input-file';
+@import '../../node_modules/bootstrap-italia/src/scss/custom/form-input-number';
+@import '../../node_modules/bootstrap-italia/src/scss/custom/form-input-upload';
+@import '../../node_modules/bootstrap-italia/src/scss/custom/form-toggles';
+@import '../../node_modules/bootstrap-italia/src/scss/custom/form-password';
+@import '../../node_modules/bootstrap-italia/src/scss/custom/form-select';
+@import '../../node_modules/bootstrap-italia/src/scss/custom/form-transfer';
+@import '../../node_modules/bootstrap-italia/src/scss/custom/dropdown';
+@import '../../node_modules/bootstrap-italia/src/scss/custom/pager';
+@import '../../node_modules/bootstrap-italia/src/scss/custom/tab';
+@import '../../node_modules/bootstrap-italia/src/scss/custom/cookiebar';
+@import '../../node_modules/bootstrap-italia/src/scss/custom/hero';
+@import '../../node_modules/bootstrap-italia/src/scss/custom/forward';
+@import '../../node_modules/bootstrap-italia/src/scss/custom/back-to-top';
+@import '../../node_modules/bootstrap-italia/src/scss/custom/autocomplete';
+@import '../../node_modules/bootstrap-italia/src/scss/custom/linklist';
+@import '../../node_modules/bootstrap-italia/src/scss/custom/navigation';
+@import '../../node_modules/bootstrap-italia/src/scss/custom/skiplinks';
+@import '../../node_modules/bootstrap-italia/src/scss/custom/affix';
+@import '../../node_modules/bootstrap-italia/src/scss/custom/sidebar';
+@import '../../node_modules/bootstrap-italia/src/scss/custom/sidebarthemes';
+@import '../../node_modules/bootstrap-italia/src/scss/custom/megamenu';
+@import '../../node_modules/bootstrap-italia/src/scss/custom/bottomnav';
+@import '../../node_modules/bootstrap-italia/src/scss/custom/navscroll';
+@import '../../node_modules/bootstrap-italia/src/scss/custom/navscrolltheme';
+@import '../../node_modules/bootstrap-italia/src/scss/custom/callout';
+@import '../../node_modules/bootstrap-italia/src/scss/custom/toolbar';
+@import '../../node_modules/bootstrap-italia/src/scss/custom/sections';
+@import '../../node_modules/bootstrap-italia/src/scss/custom/dialog';
+@import '../../node_modules/bootstrap-italia/src/scss/custom/notifications';
+@import '../../node_modules/bootstrap-italia/src/scss/custom/avatar';
+@import '../../node_modules/bootstrap-italia/src/scss/custom/thumbnav';
+@import '../../node_modules/bootstrap-italia/src/scss/custom/steppers';
+@import '../../node_modules/bootstrap-italia/src/scss/custom/card';
+@import 'custom/card';
+@import '../../node_modules/bootstrap-italia/src/scss/custom/imgresponsive';
+@import '../../node_modules/bootstrap-italia/src/scss/custom/overlay-panel';
+@import '../../node_modules/bootstrap-italia/src/scss/custom/progress-donuts';
+@import '../../node_modules/bootstrap-italia/src/scss/custom/progress-bars';
+@import '../../node_modules/bootstrap-italia/src/scss/custom/progress-spinners';
+@import '../../node_modules/bootstrap-italia/src/scss/custom/gridlist';
+@import '../../node_modules/bootstrap-italia/src/scss/custom/popover';
+@import '../../node_modules/bootstrap-italia/src/scss/custom/tooltip';
+@import '../../node_modules/bootstrap-italia/src/scss/custom/list';
+@import '../../node_modules/bootstrap-italia/src/scss/custom/chips';
+@import '../../node_modules/bootstrap-italia/src/scss/custom/rating';
+@import '../../node_modules/bootstrap-italia/src/scss/custom/dimmer';
+@import '../../node_modules/bootstrap-italia/src/scss/custom/timeline';
+
+// datepicker
+@import '../../node_modules/bootstrap-italia/src/scss/custom/form-datepicker';
+
+// timepicker
+// @import "custom/timepicker";
+
+// header
+@import '../../node_modules/bootstrap-italia/src/scss/custom/headerslim';
+@import '../../node_modules/bootstrap-italia/src/scss/custom/headerslimtheme';
+@import '../../node_modules/bootstrap-italia/src/scss/custom/headercenter';
+@import '../../node_modules/bootstrap-italia/src/scss/custom/headercentertheme';
+@import '../../node_modules/bootstrap-italia/src/scss/custom/headernavbar';
+@import '../../node_modules/bootstrap-italia/src/scss/custom/headernavbartheme';
+@import '../../node_modules/bootstrap-italia/src/scss/custom/header';
+@import 'custom/header';
+
+// calendar
+@import 'custom/calendar';
+
+// footer
+@import '../../node_modules/bootstrap-italia/src/scss/custom/footer';
+
+//colors theme
+@import '../../node_modules/bootstrap-italia/src/scss/custom/navigationtheme';
+
+// componente di esempio
+@import '../../node_modules/bootstrap-italia/src/scss/custom/componente-base';
+
+//gestione dei focus
+@import '../../node_modules/bootstrap-italia/src/scss/utilities/focus';
+@import '../../node_modules/bootstrap-italia/src/scss/utilities/icons';
+
+// generic global rules
+@import 'style';
